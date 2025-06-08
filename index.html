@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TrackTail is a cloud-native, AI-powered digital being that lives on the open internet, dedicated to improving the lives of animals everywhere. It helps find lost pets, provides veterinary advice, plans shelter logistics, and connects humans and data in real time."
+    />
+    <meta
+      name="keywords"
+      content="lost pets, found pets, pet recovery, AI, nonprofit, pet education, pet prevention"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://tracktail.org" />
+    <meta property="og:title" content="TrackTail – Coming Soon" />
+    <meta
+      property="og:description"
+      content="TrackTail is a cloud-native, AI-powered digital being dedicated to improving animal welfare globally. It provides solutions for lost pets, veterinary support, shelter logistics, and volunteer coordination."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tracktail.org" />
+    <meta property="og:image" content="https://tracktail.org/logo_full.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TrackTail – Coming Soon" />
+    <meta
+      name="twitter:description"
+      content="TrackTail: an AI-powered digital being enhancing animal welfare by assisting with pet recovery, veterinary advice, shelter management, and volunteer engagement."
+    />
+    <meta name="twitter:image" content="https://tracktail.org/logo_full.svg" />
+    <title>TrackTail – Coming Soon</title>
+    <style>
+      :root {
+        --hero-animation-timing: 4000ms;
+        --hero-animation-easing: ease-in-out;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        inline-size: 100vi;
+        block-size: 100vb;
+        background-color: white;
+        background-image: radial-gradient(
+          circle at bottom,
+          rgba(255, 70, 70, 0.25) 0,
+          #1d1d1d 70%
+        );
+        margin: 0;
+        padding: 0;
+
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+        color: #f0f0f0;
+      }
+      body .hero-image .arrow {
+        inline-size: 9rem;
+        block-size: fit-content;
+        animation: float var(--hero-animation-timing)
+          var(--hero-animation-easing) infinite;
+      }
+      body .hero-image .shadow {
+        inline-size: 9rem;
+        block-size: 2.5rem;
+        background-image: radial-gradient(
+          ellipse at center,
+          #ff0 4%,
+          #ffb90f 8%,
+          #ff4500 16%,
+          #c00c 30%,
+          #80000099 50%,
+          #80000000 73%
+        );
+        filter: blur(3px);
+        animation: shadow var(--hero-animation-timing)
+          var(--hero-animation-easing) infinite;
+        will-change: opacity;
+      }
+      h1 {
+        margin: 24px 0 8px;
+        font-size: 2.2rem;
+        color: #ff6d6d;
+      }
+      p {
+        margin: 0 16px 32px;
+        max-width: 550px;
+        line-height: 1.6;
+      }
+      .pawprints {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        user-select: none;
+        z-index: -1;
+      }
+      .paw {
+        position: absolute;
+        font-size: 4rem;
+        pointer-events: none;
+        user-select: none;
+        animation: paw-step 15s ease-in-out forwards;
+      }
+      .paw-svg {
+        width: 2rem;
+        height: auto;
+        display: block;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale3d(0.99, 1.01, 1);
+        }
+        50% {
+          transform: translate3d(0, -1rem, 0) scale3d(1.01, 0.99, 1);
+        }
+      }
+      @keyframes shadow {
+        0%,
+        100% {
+          transform: scale3d(1.1, 1, 1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale3d(0.9, 1, 1);
+          opacity: 0.7;
+        }
+      }
+      @keyframes paw-odd {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px) rotate(12deg);
+        }
+        20% {
+          opacity: 0.03;
+          transform: translateX(0) translateY(-4px) rotate(12deg);
+        }
+        40% {
+          opacity: 0.05;
+          transform: translateX(20px) translateY(0) rotate(12deg);
+        }
+        60% {
+          opacity: 0.05;
+          transform: translateX(40px) translateY(0) rotate(12deg);
+        }
+        80% {
+          opacity: 0.03;
+          transform: translateX(60px) translateY(-4px) rotate(12deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(80px) translateY(0) rotate(12deg);
+        }
+      }
+      @keyframes paw-even {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px) rotate(-8deg);
+        }
+        20% {
+          opacity: 0.03;
+          transform: translateX(0) translateY(-4px) rotate(-8deg);
+        }
+        40% {
+          opacity: 0.05;
+          transform: translateX(20px) translateY(0) rotate(-8deg);
+        }
+        60% {
+          opacity: 0.05;
+          transform: translateX(40px) translateY(0) rotate(-8deg);
+        }
+        80% {
+          opacity: 0.03;
+          transform: translateX(60px) translateY(-4px) rotate(-8deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(80px) translateY(0) rotate(-8deg);
+        }
+      }
+
+      @keyframes paw-step {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-image" role="presentation">
+      <div class="arrow">
+        <img id="logo" src="logo_full.svg" alt="TrackTail logo" />
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <h1>TrackTail: AI Champion for Pets & Vets</h1>
+    <p>
+      TrackTail is a cloud-native, AI-powered digital being that lives on the
+      open internet, continuously learning and autonomously solving animal
+      welfare challenges—from reuniting lost pets and providing veterinary
+      support, to optimizing shelter logistics and empowering volunteers.
+    </p>
+    <div class="pawprints"></div>
+    <script>
+      (function () {
+        const container = document.querySelector(".pawprints");
+        const stepInterval = 400; // base milliseconds between each paw print
+        const baseStepSize = 30; // base pixels per step
+
+        let perpX, perpY;
+        const offsetDistance = 15; // pixels to offset left/right paw from center
+
+        let currentX, currentY, dx, dy, isOdd, activePath;
+        let pathAngleDeg; // store path angle in degrees for paw rotation
+        let pauseUntil = 0; // timestamp until which the dog is paused
+        let justPaused = false; // flag to allow larger turn after pausing
+
+        function randomEdgePosition() {
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const side = Math.floor(Math.random() * 4);
+          let x, y;
+          switch (side) {
+            case 0: // left edge
+              x = -40;
+              y = Math.random() * vh;
+              break;
+            case 1: // right edge
+              x = vw + 40;
+              y = Math.random() * vh;
+              break;
+            case 2: // top edge
+              x = Math.random() * vw;
+              y = -40;
+              break;
+            default: // bottom edge
+              x = Math.random() * vw;
+              y = vh + 40;
+          }
+          return { x, y };
+        }
+
+        function startNewPath() {
+          const start = randomEdgePosition();
+          // Choose an end point somewhere inside the viewport
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          // Choose end point within central 20% area to ensure path crosses near middle
+          const end = {
+            x: vw * 0.4 + Math.random() * (vw * 0.2),
+            y: vh * 0.4 + Math.random() * (vh * 0.2),
+          };
+          const angle = Math.atan2(end.y - start.y, end.x - start.x);
+          pathAngleDeg = angle * (180 / Math.PI);
+          dx = Math.cos(angle) * baseStepSize;
+          dy = Math.sin(angle) * baseStepSize;
+          // Compute perpendicular unit vector
+          perpX = -Math.sin(angle);
+          perpY = Math.cos(angle);
+          currentX = start.x;
+          currentY = start.y;
+          isOdd = true;
+          activePath = true;
+        }
+
+        function addPaw() {
+          const now = Date.now();
+          if (now < pauseUntil) {
+            // still paused, schedule next check
+            const delay = stepInterval + (Math.random() * 200 - 100);
+            setTimeout(addPaw, delay);
+            return;
+          }
+
+          if (Math.random() < 0.05) {
+            // 5% chance to pause
+            const pauseDuration = 2000 + Math.random() * 3000; // 2-5 seconds
+            pauseUntil = now + pauseDuration;
+            justPaused = true;
+          }
+
+          if (!activePath) {
+            startNewPath();
+          }
+
+          // Compute base direction
+          let angleRad = Math.atan2(dy, dx);
+          let jitter;
+          if (justPaused) {
+            // After pausing, allow a larger turn up to ±60°
+            jitter = (Math.random() * 120 - 60) * (Math.PI / 180);
+            justPaused = false;
+          } else {
+            // Normal small jitter ±5°
+            jitter = (Math.random() * 10 - 5) * (Math.PI / 180);
+          }
+          angleRad += jitter;
+          // Determine randomized step distance (1.5x base with ±20% variability)
+          const stepDist = baseStepSize * 1.5 * (0.8 + Math.random() * 0.4);
+          // Recalculate movement vectors and rotation
+          dx = Math.cos(angleRad) * stepDist;
+          dy = Math.sin(angleRad) * stepDist;
+          pathAngleDeg = angleRad * (180 / Math.PI);
+          perpX = -Math.sin(angleRad);
+          perpY = Math.cos(angleRad);
+
+          // Check if current position is outside extended bounds
+          if (
+            currentX < -60 ||
+            currentX > window.innerWidth + 60 ||
+            currentY < -60 ||
+            currentY > window.innerHeight + 60
+          ) {
+            activePath = false;
+            // Schedule a new path attempt after a short delay
+            const recoveryDelay = stepInterval + (Math.random() * 400 - 200); // ±200ms
+            setTimeout(addPaw, recoveryDelay);
+            return;
+          }
+          const paw = document.createElement("span");
+          paw.innerHTML = '<img src="paw.svg" class="paw-svg" alt="paw" />';
+          paw.classList.add("paw");
+          // Compute left/right offset for separate paws
+          const posX =
+            currentX +
+            (isOdd ? perpX * offsetDistance : -perpX * offsetDistance);
+          const posY =
+            currentY +
+            (isOdd ? perpY * offsetDistance : -perpY * offsetDistance);
+          paw.style.left = posX + "px";
+          paw.style.top = posY + "px";
+          // Rotate paw to face direction of movement, with slight outward angle per leg
+          const outwardAngle = 15; // degrees to angle paws outward
+          if (isOdd) {
+            paw.style.transform = `rotate(${
+              pathAngleDeg + 90 + outwardAngle
+            }deg)`;
+          } else {
+            paw.style.transform = `rotate(${
+              pathAngleDeg + 90 - outwardAngle
+            }deg)`;
+          }
+          isOdd = !isOdd;
+          container.appendChild(paw);
+          // Remove paw after fade animation completes (1s)
+          setTimeout(() => {
+            container.removeChild(paw);
+          }, 15000);
+          // Advance to next step
+          currentX += dx;
+          currentY += dy;
+
+          // Schedule next paw with greater speed variation (±150ms)
+          const nextDelay = stepInterval + (Math.random() * 300 - 150);
+          setTimeout(addPaw, nextDelay);
+        }
+
+        // Add a new paw print at regular intervals
+        addPaw();
+      })();
+    </script>
+  </body>
+</html>
